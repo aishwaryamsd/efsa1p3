@@ -1,0 +1,26 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+
+    <br>
+    <p>New Registration</p>
+    <br>
+    <form method="post" action=" ">
+
+        {{ form.as_p }}
+        {% csrf_token %}
+
+        <input type="submit" value="Register"/>
+        <input type="hidden" name="next" value="Complete"/>
+
+        <br>
+
+        <p></p>
+        <br>
+        After you confirm the registration above, Please <a href="/accounts/login/">Login here</a>
+    </form>
+{% endblock %}
+
+
+
+
+
